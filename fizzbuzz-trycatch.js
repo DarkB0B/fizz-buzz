@@ -1,37 +1,32 @@
-//doesn't work
+//doesn't work idk why
 
-function fizzbuzz(i){
-    try{!(i % 3 && i % 5)}    
-    catch(e)
-    {
-        
-        console.log("fizz buzz");
-        console.log(" ");
-        
-    }
-    try{!(i % 3)}    
-    catch(e)
-    {
-        console.log("fizz");
-        console.log(" ");
-        
-    }
-    try{!(i % 5)}    
-    catch(e)
-    {
-        console.log("buzz");
-        console.log(" ");
-        
-    }
-    try{!(i % 3 && i % 5)}    
+
+for(var i = 0; i < 100; i++){
+    try{(i % 3 && i % 5) || throwexception}    
     catch(e)
     {
         console.log(i);
-        console.log(" ");
-        
+        console.log(" ");    
+        i++;   
     }
-}
-for(var i = 0; i < 100; i++){
-    console.log(i);
-    fizzbuzz(i);
+    try{!(i % 3 && i % 5) || throwexception}    
+    catch(e)
+    {       
+        console.log("fizz buzz");
+        console.log(" ");
+        i++;        
+    }
+    try{(i % 3) || throwexception}    
+    catch(e)
+    {
+        console.log("fizz");
+        console.log(" ");        
+    }
+    try{(i % 5) || throwexception}    
+    catch(e)
+    {
+        console.log("buzz");
+        console.log(" ");       
+    }
+   
 }
