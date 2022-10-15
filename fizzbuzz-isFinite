@@ -1,0 +1,19 @@
+for (let i = 0; i <= 100; i++) {
+    var FizzDiv = 5 / (i % 3)
+    var BuzzDiv = 5 / (i % 5)
+    var output = ""
+
+    var Fizz = isFinite(FizzDiv) || "fizz";
+    var Buzz = isFinite(BuzzDiv) || "buzz";
+    while(isFinite(FizzDiv) == false || isFinite(BuzzDiv) == false){
+        output += Fizz;
+        output += Buzz;
+
+        console.log(output.replaceAll("true", ''))
+        break;
+    }
+    while(isFinite(FizzDiv) == true && isFinite(BuzzDiv) == true){
+        console.log(i)
+        break;
+    }
+}
