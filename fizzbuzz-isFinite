@@ -1,19 +1,52 @@
+
+//ver 1, working
+
+// for (let i = 0; i <= 100; i++) {
+//     var fizzDiv = 5 / (i % 3)
+//     var buzzDiv = 5 / (i % 5)
+//     var fizzbuzz = ""
+
+//     var fizz = isFinite(fizzDiv) || "fizz";
+//     var buzz = isFinite(buzzDiv) || "buzz";
+
+
+//     fizzbuzz += fizz;
+//     fizzbuzz += buzz;
+//     output = fizzbuzz.replaceAll("true", '')
+//     while(output.length <= 1){
+//         output+= i;
+//         break;
+//     }
+//     console.log(output);
+    
+// }
+
+//ver2, 
 for (let i = 0; i <= 100; i++) {
     var fizzDiv = 5 / (i % 3)
     var buzzDiv = 5 / (i % 5)
-    var output = ""
+    var fizzbuzz = ""
 
-    var fizz = isFinite(fizzDiv) || "fizz";
-    var buzz = isFinite(buzzDiv) || "buzz";
-    while(isFinite(fizzDiv) == false || isFinite(buzzDiv) == false){
-        output += fizz;
-        output += buzz;
+    var fizz = "";
+    var buzz = "";
 
-        console.log(output.replaceAll("true", ''))
+    while(!(isFinite(fizzDiv))){
+        fizz += "fizz"
         break;
     }
-    while(isFinite(fizzDiv) == true && isFinite(buzzDiv) == true){
-        console.log(i)
+    while(!(isFinite(buzzDiv))){
+        buzz += "buzz"
         break;
     }
+
+
+    fizzbuzz += fizz;
+    fizzbuzz += buzz;
+    output = fizzbuzz.replaceAll("true", '')
+    while(output.length <= 1){
+        output+= i;
+        break;
+    }
+    console.log(output);
+    
 }
